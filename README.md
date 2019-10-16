@@ -1,4 +1,4 @@
-66045
+Numer albumu: 66045
 Zadanie 3
 Tartak otrzymał zamówienie na wykonanie co najmniej 300 kompletów belek. Każdy komplet składa się z 7 belek o długości 0,7m oraz 4 belek o długości 2,5m. W jaki sposób powinno być zrealizowane zamówienie, by odpad powstały w procesie cięcia dłużyc o długości 5,2m był minimalny? Ile wyniesie wielkość odpadu przy optymalnym cięciu? Rozważ dwie metody cięcia.
 
