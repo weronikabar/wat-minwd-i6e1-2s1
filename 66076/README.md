@@ -39,19 +39,20 @@ x2 -- ilosc zjedzonego produktu P2
 Z = 1,2x1 + 1,8x2 ---> min
 
 ### Zrzut z działania aplikacji
-OPTIMAL 45.0 @ { 15.0, 15.0 }
+OPTIMAL 44.99999999999999 @ { 15.000000000000016, 14.999999999999986 }
 ############################################
 0 <= x1: 15 (1.2)
 0 <= x2: 15 (1.8)
-30 <= Ograniczenie 3: 30.0
+36 <= Ograniczenie 3: 150.0
 60 <= Ograniczenie 2: 60.0
+30 <= Ograniczenie 4: 30.0
 40 <= Ograniczenie 1: 45.0
 ############################################
 
 ### Wynik
-x1 = 15
-x2 = 15
-Wartość funkcji celu 45
+x1 = 15.000000000000016
+x2 = 14.999999999999986
+Wartość funkcji celu 44.99999999999999
 
 ## b) 2.	Jak zmieni się rozwiązanie, jeśli ze względu na szkodliwe działanie nie można podawać więcej niż 240 jednostek witaminy A?
 
@@ -76,17 +77,18 @@ Z = 1,2x1 + 1,8x2 ---> min
 
 ### Print z aplikacji:
 
-OPTIMAL 44.99999999999999 @ { 14.999999999999996, 15.0 }
+OPTIMAL 44.99999999999999 @ { 15.000000000000016, 14.999999999999986 }
 ############################################
 0 <= x1: 15 (1.2)
 0 <= x2: 15 (1.8)
-30 <= Ograniczenie 3: 30.0
+36 <= Ograniczenie 3: 150.0
 60 <= Ograniczenie 2: 60.0
+30 <= Ograniczenie 4: 30.0
 40 <= Ograniczenie 1: 45.0 <= 80
 ############################################
 
 ### Wynik
 
 x1 = 14.999999999999996
-x2 = 15.0
+x2 = 14.999999999999986
 Wartość funkcji celu 44.99999999999999

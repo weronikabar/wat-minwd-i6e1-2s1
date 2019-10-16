@@ -8,7 +8,9 @@ import org.ojalgo.optimisation.Variable;
 public class App
 {
     public static void main( String[] args ) {
-        // partA();
+        System.out.println("\n\n\n\n\n Part a");
+        partA();
+        System.out.println("\n\n\n\n\n Part b");
         partB();
     }
 
@@ -23,8 +25,10 @@ public class App
         limitationOne.set(a, 6).set(b, 3);
         final Expression limitationTwo = model.addExpression("Ograniczenie 2").lower(60).upper(Double.POSITIVE_INFINITY);
         limitationTwo.set(a, 1).set(b, 3);
-        final Expression limitationThree = model.addExpression("Ograniczenie 3").lower(180).upper(Double.POSITIVE_INFINITY);
-        limitationThree.set(a, 6).set(b, 6);
+        final Expression limitationThree = model.addExpression("Ograniczenie 3").lower(36).upper(Double.POSITIVE_INFINITY);
+        limitationThree.set(a, 9).set(b, 1);
+        final Expression limitationFour = model.addExpression("Ograniczenie 4").lower(180).upper(Double.POSITIVE_INFINITY);
+        limitationFour.set(a, 6).set(b, 6);
         a.integer(true);
         b.integer(true);
         Optimisation.Result result = model.minimise();
@@ -42,8 +46,10 @@ public class App
         limitationOne.set(a, 6).set(b, 3);
         final Expression limitationTwo = model.addExpression("Ograniczenie 2").lower(60).upper(Double.POSITIVE_INFINITY);
         limitationTwo.set(a, 1).set(b, 3);
-        final Expression limitationThree = model.addExpression("Ograniczenie 3").lower(180).upper(Double.POSITIVE_INFINITY);
-        limitationThree.set(a, 6).set(b, 6);
+        final Expression limitationThree = model.addExpression("Ograniczenie 3").lower(36).upper(Double.POSITIVE_INFINITY);
+        limitationThree.set(a, 9).set(b, 1);
+        final Expression limitationFour = model.addExpression("Ograniczenie 4").lower(180).upper(Double.POSITIVE_INFINITY);
+        limitationFour.set(a, 6).set(b, 6);
         a.integer(true);
         b.integer(true);
         Optimisation.Result result = model.minimise();
