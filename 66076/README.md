@@ -7,16 +7,26 @@
 Zadanie 5
 Zadanie 5. Dziecko w pewnym wieku potrzebuje określonych ilości witamin. Ilość witamin dostarczanych przez pewne produkty przedstawiono poniżej.
 
-| Produkty	| Ilość witamin w jednostce	| Koszt jednostkowy [zł]
-|	          | A	  | B	  | C	  | E       | 	
-| P1	      | 6	  | 1	  | 9	  | 6	      | 1,2
-| P2	      | 3	  | 3	  | 1	  | 6	      | 1,8
-| Min ilośc	| 120	| 60	| 36	| 180	    |
+| Produkty	| 								    | Koszt jednostkowy [zł]  |
+|-----------|-------|-------|-------|-----------|-------------------------|
+|	        | A	    | B	    | C	    | E         | 	                      |
+| P1	    | 6	    | 1	    | 9	    | 6	        | 1,2					  |
+| P2	    | 3	    | 3	    | 1	    | 6	        | 1,8                     |
+| Min ilośc	| 120	| 60	| 36	| 180	    |                         |
+
+
+|Produkty        |I            |II    |III      |Kosz jednostkowy |
+|----------------|-------------|------|---------|-----------------|
+|P1              |3            |8     |12       |6                |
+|P2              |9            |4     |3        |9                |
+|Minimalna ilosc |27           |32    |36       |                 |
+
+
 
 
 ## Model matematyczny
 
-### Zmienne
+### Cechy
 
 x1 -- ilosc zjedzonego produktu P1
 x2 -- ilosc zjedzonego produktu P2
