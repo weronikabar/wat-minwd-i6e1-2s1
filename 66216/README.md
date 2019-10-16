@@ -1,5 +1,16 @@
 ##Treść zadania
 
+Zadanie 10. W pewnym zakładzie produkcyjnym wytwarza się cztery wyroby (1, 2, 3 i 4). Ich
+produkcja wymaga nakładów pewnych środków produkcji. Część z tych środków zakład może
+nabywać w nieograniczonych ilościach. Jednak niektóre z nich mogą być wykorzystane tylko w ściśle
+określonych granicach. Do tej grupy należą środki A i B. Limity tych środków podano w ostatniej
+kolumnie tabeli.
+Jednostkowe nakłady środków na produkcje wyrobów przedstawiono w tabeli. Znając zysk ze
+sprzedaży jednostki każdego z wyrobów (ostatni wiersz) wyznaczyć optymalne z punktu widzenia
+zysków rozmiary produkcji.
+
+![alt-text](https://imgur.com/c6XHaSX)
+
 Limit środków A : 26 000
 Limit środków B : 100 000
 
