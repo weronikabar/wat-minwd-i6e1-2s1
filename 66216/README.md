@@ -9,7 +9,8 @@ Jednostkowe nakłady środków na produkcje wyrobów przedstawiono w tabeli. Zna
 sprzedaży jednostki każdego z wyrobów (ostatni wiersz) wyznaczyć optymalne z punktu widzenia
 zysków rozmiary produkcji.
 
-![alt-text](https://imgur.com/c6XHaSX)
+Link do tabelki:
+https://imgur.com/c6XHaSX
 
 Limit środków A : 26 000
 Limit środków B : 100 000
@@ -33,7 +34,10 @@ Ograniczenia :
 x1,x2,x3,x4 >= 0
 
 ##Cel zadania
-Należy wyznaczyć ilość każdego z wyrobów, którą należy wyprodukować, przy zachowaniu ograniczeń, aby zyski z produkcji były najwyższe.               
+Należy wyznaczyć ilość każdego z wyrobów, którą należy wyprodukować, przy zachowaniu ograniczeń, aby zyski z produkcji były najwyższe.   
+
+#Skrypt rozwiązujący zadanie wymaga bibliotek SciPy oraz numpy. Aby je zainstalować należy skorzystać z pip:
+pip install scipy numpy
 
 ##Analiza otrzymanych wyników
 Otrzymane rozwiązanie :
