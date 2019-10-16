@@ -18,7 +18,7 @@ Zadanie 5. Dziecko w pewnym wieku potrzebuje określonych ilości witamin. Iloś
 | P2	    | 3	    | 3	    | 1	    | 6	        | 1,8                     |
 | Min ilośc	| 120	| 60	| 36	| 180	    |                         |
 
-# a) 1.	Ile należy wykorzystać produktów P1 i P2, aby spełniając wymagania koszt spełnienia zapotrzebowania był jak najniższy?
+## a) 1.	Ile należy wykorzystać produktów P1 i P2, aby spełniając wymagania koszt spełnienia zapotrzebowania był jak najniższy?
 
 ## Model matematyczny
 
@@ -53,7 +53,7 @@ x1 = 15
 x2 = 15
 Wartość funkcji celu 45
 
-# b) 2.	Jak zmieni się rozwiązanie, jeśli ze względu na szkodliwe działanie nie można podawać więcej niż 240 jednostek witaminy A?
+## b) 2.	Jak zmieni się rozwiązanie, jeśli ze względu na szkodliwe działanie nie można podawać więcej niż 240 jednostek witaminy A?
 
 ## Model matematyczny
 
