@@ -24,7 +24,7 @@ Scraper creates json files with such structure:
 	]
 }
 ```
-and saves files to /output/url
+and saves files to /output/url<br></br>
 Photos are beeing saved in seperated files in base64 format
 
 
