@@ -1,4 +1,4 @@
-# Scraper Wikislownika
+# Scraper Wiktionary
 ### Piotr Filochowski 66076
 
 ### Input
@@ -8,7 +8,7 @@ Urls should be separated by semicolons.
 ### Output
 Scraper creates json files with such structure:
 
-
+```json
 {
 	"language1": "polski",
 	"language2": "angielski",
@@ -23,8 +23,8 @@ Scraper creates json files with such structure:
 		}
 	]
 }
-
-and saves files to /output/<url>
+```
+and saves files to /output/url
 Photos are beeing saved in seperated files in base64 format
 
 
