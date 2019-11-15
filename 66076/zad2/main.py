@@ -3,6 +3,7 @@ import bs4 as soup
 import io
 import sys
 import os
+import json
 
 def getInput():
     # TODO: odczytac input z pliku
@@ -13,13 +14,18 @@ def getInput():
 def scrap(url):
     response = urlopen(url)
     bsObj = bsObj = soup.BeautifulSoup(response.read(), 'lxml')
+    model = Model()
+    model.language1 = "polski"
+    model.language2 = "angielski"
     with io.open(createFileName(bsObj.head.title.getText()), 'w+', encoding='utf-8') as openedFile:
         for tableRow in bsObj.find_all('tr'): 
-            openedFile.write(tableRow.get_text())
-
+            word = getWord(tableRow)
+            model.words.append(word)x
+        jsonObj = json.dumps(model)
+        openedFile.write(jsonObj)
 
 def createFileName(string):
-    # File name can't contain: \ / * ? < > | 
+    # File name can't contain: \ / * ? < > | & 
     # Let's convert those chars for _ 
     # File name can't be longer that 260 on windows (i think) but lets cut it to 50 chars to make it more beautiful
     outputFileName = string.replace("\\", "_").replace("/", "_").replace("*", "_").replace("?", "_").replace("<", "_").replace(">", "_").replace("|", "_").replace(":", "_").replace("&", "_")
@@ -30,6 +36,12 @@ def createFileName(string):
 
     return "./output/" + outputFileName
 
+def getWord(tableRow):
+    word = Word()
+    word.language1 = "baleron m"
+    word.language2 = "gammon"
+    word.photo = "null"
+    return word
 
 def main():
     input = getInput()
@@ -37,5 +49,14 @@ def main():
         scrap(url)
 
 
+class Model:
+    language1 = ""
+    language2 = ""
+    words = []
+
+class Word:
+    language1 = ""
+    language2 = ""
+    photo = "null"
 main()
 
