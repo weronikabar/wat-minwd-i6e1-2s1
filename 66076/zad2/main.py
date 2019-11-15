@@ -1,9 +1,15 @@
-from urllib.request import urlopen
-import bs4 as soup
 import io
-import sys
 import os
-import json
+from urllib.request import urlopen
+
+import bs4 as soup
+import jsons
+
+
+def main():
+    input = getInput()
+    for url in input:
+        scrap(url)
 
 def getInput():
     # TODO: odczytac input z pliku
@@ -20,9 +26,8 @@ def scrap(url):
     with io.open(createFileName(bsObj.head.title.getText()), 'w+', encoding='utf-8') as openedFile:
         for tableRow in bsObj.find_all('tr'): 
             word = getWord(tableRow)
-            model.words.append(word)x
-        jsonObj = json.dumps(model)
-        openedFile.write(jsonObj)
+            model.words.append(word)
+        openedFile.write(jsons.dumps(model))
 
 def createFileName(string):
     # File name can't contain: \ / * ? < > | & 
@@ -43,20 +48,16 @@ def getWord(tableRow):
     word.photo = "null"
     return word
 
-def main():
-    input = getInput()
-    for url in input:
-        scrap(url)
-
 
 class Model:
     language1 = ""
     language2 = ""
     words = []
-
 class Word:
     language1 = ""
     language2 = ""
     photo = "null"
+
+
 main()
 

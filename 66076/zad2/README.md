@@ -32,6 +32,8 @@ Application was developed with Python 3.8.0. It requires instaling packages:
 
 ```sh
 pip install bs4
+pip install lxml
+pip install jsons
 ```
 
 ### Running app
