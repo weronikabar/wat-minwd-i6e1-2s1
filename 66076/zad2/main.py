@@ -24,7 +24,7 @@ def scrap(url):
     model.language1 = "polski"
     model.language2 = "angielski"
     with io.open(createFileName(bsObj.head.title.getText()), 'w+', encoding='utf-8') as openedFile:
-        for tableRow in bsObj.find_all('tr'): 
+        for tableRow in bsObj.find_all('tr'):
             word = getWord(tableRow)
             model.words.append(word)
         openedFile.write(jsons.dumps(model))
@@ -35,24 +35,36 @@ def createFileName(string):
     # File name can't be longer that 260 on windows (i think) but lets cut it to 50 chars to make it more beautiful
     outputFileName = string.replace("\\", "_").replace("/", "_").replace("*", "_").replace("?", "_").replace("<", "_").replace(">", "_").replace("|", "_").replace(":", "_").replace("&", "_")
     outputFileName = outputFileName[:50]
-
     current_work_directory = os.getcwd()
-    abs_work_directory = os.path.abspath(current_work_directory)
-
-    return "./output/" + outputFileName
+    return "./output/" + outputFileName + ".json"
 
 def getWord(tableRow):
     word = Word()
-    word.language1 = "baleron m"
-    word.language2 = "gammon"
-    word.photo = "null"
-    return word
-
+    cells = tableRow.find_all('td')
+    if (len(cells) == 0):
+        return Word()
+    if (len(cells) == 3):  # with photo
+        word.language1 = cells[0].getText()
+        word.language2 = cells[2].getText()
+        img = cells[1].find_all('img')
+        if (len(img) > 0):
+            href = img[0]['srcset']
+            word.photo = href
+        else:
+            word.photo = 'dupa'
+        return word
+    if (len(cells) == 2):
+        word.language1 = cells[0].getText()
+        word.language2 = cells[1].getText()
+        word.photo = "null"
+        return word
 
 class Model:
     language1 = ""
     language2 = ""
     words = []
+
+
 class Word:
     language1 = ""
     language2 = ""
