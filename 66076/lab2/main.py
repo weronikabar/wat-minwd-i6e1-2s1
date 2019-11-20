@@ -58,7 +58,7 @@ def save_photo(photo_address, filename):
         local_image_filename = wget.download(url, './output/')
         return '/output/' + local_image_filename
     except (IndexError, HTTPError):
-        print('error occured')
+        print('\nerror occured')
         return '?'
 
 
