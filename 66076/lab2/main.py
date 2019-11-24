@@ -1,5 +1,6 @@
 import io
 import os
+import sys
 from urllib.error import HTTPError
 from urllib.request import urlopen
 
@@ -11,13 +12,26 @@ import wget
 def main():
     input = get_input()
     for url in input:
+        print(url)
+    print(type(input))
+    print(len(input))
+    for url in input:
         scrap(url)
 
 
+def read_input_urls_from_file(filepath):
+    file = open(filepath, 'r')
+    urls = file.readlines()
+    return urls
+
+
 def get_input():
-    # TODO: odczytac input z pliku
     input = []
-    input.append("https://pl.wiktionary.org/wiki/Indeks:Angielski_-_Jedzenie")
+    if len(sys.argv) < 2:
+        return input
+    else:
+        filepath = sys.argv[1]
+        return read_input_urls_from_file(filepath)
     return input
 
 
