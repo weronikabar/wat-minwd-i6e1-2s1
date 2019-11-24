@@ -56,10 +56,7 @@ public class Scraper {
                 System.setOut(console);
                 System.out.println("This will be written on the console!");
             }
-            // Get the list of repositories
-
-
-            // In case of any IO errors, we want the messages written to the console
+           
         } catch (IOException e) {
             e.printStackTrace();
         }
