@@ -1,5 +1,4 @@
 package pl.pfpg.min3;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,9 @@
 {
-  "name": "superapp",
+  "name": "go_js_gitlab_client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "gojs": "^2.1.1",
+    "@material-ui/core": "^4.7.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-gojs": "^4.5.0",
