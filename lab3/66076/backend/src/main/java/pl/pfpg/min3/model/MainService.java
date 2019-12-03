@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 public class MainService {
 
   public UserInformation getUserData(InputRequest inputRequest) {
-    log.info(inputRequest.githubUserName);
-    log.info(inputRequest.gaphDepth);
+    log.info(inputRequest.input);
+    log.info(inputRequest.graphDepth);
     return UserInformation.builder().email("piotrek jestem").build();
   }
 }

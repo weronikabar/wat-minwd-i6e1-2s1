@@ -2,6 +2,7 @@ package pl.pfpg.min3;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,13 +18,15 @@ import pl.pfpg.min3.model.UserQueryResponse;
 @RequestMapping("/")
 @Slf4j
 @RequiredArgsConstructor
+
 public class Controller {
 
   private final MainService mainService;
 
+  @CrossOrigin
   @PostMapping("getUserData")
-  public UserInformation getUserData(@RequestBody InputRequest inputRequest){
-    return mainService.getUserData(inputRequest);
+  public UserInformation getUserData(@RequestBody InputRequest input){
+    return mainService.getUserData(input);
   }
 }
 

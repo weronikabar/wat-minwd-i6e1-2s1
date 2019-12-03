@@ -9,6 +9,6 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class InputRequest {
-  String githubUserName;
-  String gaphDepth;
+  String input;
+  String graphDepth;
 }
