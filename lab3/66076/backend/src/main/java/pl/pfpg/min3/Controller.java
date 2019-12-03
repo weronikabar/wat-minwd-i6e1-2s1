@@ -3,9 +3,14 @@ package pl.pfpg.min3;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import pl.pfpg.min3.model.InputRequest;
+import pl.pfpg.min3.model.MainService;
+import pl.pfpg.min3.model.UserInformation;
 import pl.pfpg.min3.model.UserQueryResponse;
 
 @RestController
@@ -14,15 +19,12 @@ import pl.pfpg.min3.model.UserQueryResponse;
 @RequiredArgsConstructor
 public class Controller {
 
-  private final GithubService githubService;
+  private final MainService mainService;
 
-  @GetMapping("/userQuery")
-  public UserQueryResponse getUsersByUserName(@RequestParam String userName){
-    return githubService.getUsersByUserName(userName);
-  }
-
-  @GetMapping("/followersGraph")
-  public void getFollowers(@RequestParam String userName){
-    githubService.getFollowers(userName);
+  @PostMapping("getUserData")
+  public UserInformation getUserData(@RequestBody InputRequest inputRequest){
+    return mainService.getUserData(inputRequest);
   }
 }
+
+
